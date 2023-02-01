@@ -3,3 +3,7 @@ p {
     background-color: aquamarine;
     border : 7px solid green;
 }
+
+p.innerpara{    
+    background-color: lavenderblush
+}

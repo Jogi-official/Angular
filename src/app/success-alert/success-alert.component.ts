@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./success-alert.component.css']
 })
 export class SuccessAlertComponent {
-
+      username = "";
+      onClickReset(){
+        this.username = "";
+      }
 }

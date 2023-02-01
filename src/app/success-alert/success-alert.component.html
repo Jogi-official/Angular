@@ -1,1 +1,15 @@
 <p>You are so successfull</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <label>Username</label>
+            <input type="text" class="form-control" [(ngModel)] = 'username'>
+            <p class= "innerpara">{{username}}</p>
+            <button class ="btn btn-primary" 
+            [disabled] = "username === '' " 
+            (click) = 'onClickReset()'>Reset User</button>
+            <p>Completed second Assignment !!</p>
+        </div>
+    </div>
+</div>
