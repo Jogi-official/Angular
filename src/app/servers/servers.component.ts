@@ -12,29 +12,26 @@ import { Component } from '@angular/core';
   // `,
 
 
-  styles : [`
-      h1{
-        color : blue;
-      }
-  `]
+  styleUrls : ["./servers.component.css"]
 })
 export class ServersComponent {
-    
+
   allowNewServer = false;
   serverCreationStatus = 'No Server was created';
   serverName = "TestServer";
+  serverCreate = false;
     constructor(){
         setTimeout(() =>{
           this.allowNewServer = true;
-        },5000);
+        },3000);
     }
 
     onCreateServer(){
-      this.serverCreationStatus = 'Server was Created and Name is '+ this.serverName;
+      this.serverCreate = true;
+      // this.serverCreationStatus = 'Server was Created and Name is '+ this.serverName;
     }
     onUpdateServerName(event : Event){
       this.serverName = (<HTMLInputElement>event.target).value;
     }
-
 
 }

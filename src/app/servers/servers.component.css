@@ -1,3 +1,8 @@
 h1{
     color : darkcyan;
 }
+
+#sec{
+  color :red;
+  background-color: aqua;
+}
