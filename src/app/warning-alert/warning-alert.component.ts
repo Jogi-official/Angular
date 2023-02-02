@@ -2,18 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-warning-alert',
-  template: `
-  <p> This is warning ! Start Working !!</p>
-  `,
-  styles: [`
-    p{
-      padding : 20px ;
-      background-color : mistyrose;
-      border : 4px solid red ;
-    }
-  
-  `]
+  templateUrl : './warning-alert.component.html',
+  styleUrls: ['./warning-alert.component.css']
 })
 export class WarningAlertComponent {
-
+  showSecret = false;
+  log = [];
+  onToggleDisplay(){
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length+1);
+  }
 }
