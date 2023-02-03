@@ -21,7 +21,15 @@
  -->
 
  <h1>This is App Component</h1>
-
+<div class="container">
+  <app-cockpit></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-sx-12">
+        <app-server-element *ngFor="let serverElement of serverElements"></app-server-element>
+    </div>
+  </div>
+</div>
 
 
 
