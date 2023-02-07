@@ -19,4 +19,8 @@ export class GameControlComponent {
   onPauseGame(){
       clearInterval(this.interval);
   }
+
+  onResetGame(){
+    this.last_number = 0;
+  }
 }
