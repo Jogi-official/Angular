@@ -23,6 +23,7 @@ import { EvenComponent } from './even/even.component';
 import { Sec7Component } from './sec7/sec7.component';
 import { BasicHighlightDirective } from './sec7/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './sec7/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './sec7/unless.directive';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { BetterHighlightDirective } from './sec7/better-highlight/better-highlig
     EvenComponent,
     Sec7Component,
     BasicHighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
