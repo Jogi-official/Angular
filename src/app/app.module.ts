@@ -24,7 +24,7 @@ import { Sec7Component } from './sec7/sec7.component';
 import { BasicHighlightDirective } from './sec7/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './sec7/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './sec7/unless.directive';
-
+import {DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ import { UnlessDirective } from './sec7/unless.directive';
     Sec7Component,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
