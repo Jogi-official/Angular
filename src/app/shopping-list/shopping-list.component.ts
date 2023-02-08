@@ -12,4 +12,9 @@ export class ShoppingListComponentt {
     new Ingredient('Tomatoes' , 5),
     new Ingredient('EggPlant' , 5)
   ];
+
+  onIngredientAdded(ingredient: Ingredient){
+    this.ingredients.push(ingredient);
+  }
+
 }
