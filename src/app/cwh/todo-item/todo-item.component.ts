@@ -1,4 +1,4 @@
-import { Component , Input} from '@angular/core';
+import { Component , Input, Output , EventEmitter} from '@angular/core';
 import { Tod } from '../todo.model';
 
 
@@ -9,8 +9,15 @@ import { Tod } from '../todo.model';
 })
 export class TodoItemComponent {
 @Input() todo : Tod;
+@Output() todoDelete : EventEmitter<Tod> = new EventEmitter();
+@Output() todoCheckBox : EventEmitter<Tod> = new EventEmitter();
 
-onClick(){
+onClick(todo : Tod){
+  this.todoDelete.emit(todo);
   console.log("On click has been pressed !!")
+}
+
+onCheck(todo : Tod){
+  this.todoCheckBox.emit(todo);
 }
 }

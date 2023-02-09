@@ -2,6 +2,11 @@
   <li>{{tod.sno}} - {{tod.title}} - {{tod.desc}}} - {{tod.active}}</li>
 </ul> -->
 
-<div *ngFor = "let tod of todos">
-  <app-todo-item [todo] = "tod"></app-todo-item>
-</div>
+<app-add-todo (todoAdd)="addTodo($event)"  ></app-add-todo>
+<h4>Your To DO's</h4>
+<div class = 'container' *ngIf = "this.todos.length === 0 ; else elseBlock">No todo's to show</div>
+<ng-template #elseBlock>
+  <div *ngFor = "let tod of todos">
+    <app-todo-item [todo] = "tod" (todoDelete) = "deleteTodo($event)" (todoCheckBox) = "onCheck($event)"> </app-todo-item>
+  </div>
+</ng-template>

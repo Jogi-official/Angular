@@ -28,6 +28,7 @@ import {DropdownDirective } from './shared/dropdown.directive';
 import { CwhComponent } from './cwh/cwh.component';
 import { TodoComponent } from './cwh/todo/todo.component';
 import { TodoItemComponent } from './cwh/todo-item/todo-item.component';
+import { AddTodoComponent } from './cwh/add-todo/add-todo.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { TodoItemComponent } from './cwh/todo-item/todo-item.component';
     DropdownDirective,
     CwhComponent,
     TodoComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,

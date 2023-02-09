@@ -7,46 +7,34 @@ import { Tod } from '../todo.model';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent {
+  localItem : string;
   todos : Tod[] ;
   constructor() {
-    this.todos= [
-      {
-        sno : 1,
-        title : 'Buy milk',
-        desc : "lets buy something",
-        active : true
-
-      },
-      {
-        sno : 2,
-        title : 'Buy milk',
-        desc : "lets buy something",
-        active : true
-
-      },
-      {
-        sno : 3,
-        title : 'Buy milk',
-        desc : "lets buy something",
-        active : true
-
-      },
-      {
-        sno : 4,
-        title : 'Buy milk',
-        desc : "lets buy something",
-        active : true
-
-      },
-      {
-        sno : 5,
-        title : 'Buy milk',
-        desc : "lets buy something",
-        active : true
-
-      }
-    ]
+    this.localItem = localStorage.getItem("todos");
+    if(this.localItem == null){
+    this.todos= [];
+    }
+    else{
+      this.todos = JSON.parse(this.localItem)
+    }
 
   }
+
+  deleteTodo(todo : Tod) {
+      const index = this.todos.indexOf(todo);
+      this.todos.splice(index, 1);
+      localStorage.setItem('todos', JSON.stringify(this.todos));
+    }
+
+    addTodo(todo : Tod) {
+      this.todos.push(todo);
+      localStorage.setItem('todos', JSON.stringify(this.todos));
+    }
+
+    onCheck(todo : Tod) {
+      const index = this.todos.indexOf(todo);
+      this.todos[index].active = !this.todos[index].active;
+      localStorage.setItem('todos', JSON.stringify(this.todos));
+    }
 
 }
