@@ -25,6 +25,9 @@ import { BasicHighlightDirective } from './sec7/basic-highlight/basic-highlight.
 import { BetterHighlightDirective } from './sec7/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './sec7/unless.directive';
 import {DropdownDirective } from './shared/dropdown.directive';
+import { CwhComponent } from './cwh/cwh.component';
+import { TodoComponent } from './cwh/todo/todo.component';
+import { TodoItemComponent } from './cwh/todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,10 @@ import {DropdownDirective } from './shared/dropdown.directive';
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    CwhComponent,
+    TodoComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,
