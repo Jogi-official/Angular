@@ -12,6 +12,8 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ShoppingListComponentt } from './shopping-list/shopping-list.component';
 import {DropdownDirective } from './shared/dropdown.directive';
+import { AccountComponent } from './account/account.component';
+import { NewAccountComponent } from './new-account/new-account.component';
 
 // import { CockpitComponent } from './cockpit/cockpit.component';
 // import { ServerElementComponent } from './server-element/server-element.component';
@@ -60,6 +62,8 @@ import {DropdownDirective } from './shared/dropdown.directive';
     ShoppingEditComponent,
     ShoppingListComponentt,
     DropdownDirective,
+    AccountComponent,
+    NewAccountComponent,
   ],
   imports: [
     BrowserModule,
