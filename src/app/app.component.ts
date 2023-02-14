@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
+import { AccountService } from './account.service';
 
 @Component({
   selector: 'app-root',
   templateUrl : 'app.component.html',
   // styleUrls: ['./app.component.css']
-  styleUrls :['./app.component.css']
+  styleUrls :['./app.component.css'],
+  providers : [AccountService]
 })
-export class AppComponent {
+export class AppComponent  implements OnInit  {
   title = 'Project-1';
 //   serverElements = [{type : 'server' , name: "test-server" , content :'test'}];
 //   onServerAdded(serverData: {serverName : string , serverContent : string}) {
@@ -41,35 +43,23 @@ export class AppComponent {
 // }
 
 
+accounts : {name : string , status : string} [] =[];
+
+constructor(private accountService:AccountService ){}
+
+ngOnInit(){
+    this.accounts = this.accountService.accounts;
+}
+
+
+
+
 
 //MAIN CODE
 // loadedFeature = 'recipe';
 // onNavigate(feature) {
 //   this.loadedFeature = feature;
 // }
-
-accounts = [
-  {
-    name: 'Master Account',
-    status: 'active'
-  },
-  {
-    name: 'Testaccount',
-    status: 'inactive'
-  },
-  {
-    name: 'Hidden Account',
-    status: 'unknown'
-  }
-];
-
-onAccountAdded(newAccount: {name: string, status: string}) {
-  this.accounts.push(newAccount);
-}
-
-onStatusChanged(updateInfo: {id: number, newStatus: string}) {
-  this.accounts[updateInfo.id].status = updateInfo.newStatus;
-}
 
 
 }
