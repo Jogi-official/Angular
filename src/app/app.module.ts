@@ -14,6 +14,8 @@ import { ShoppingListComponentt } from './shopping-list/shopping-list.component'
 import {DropdownDirective } from './shared/dropdown.directive';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
+import { AccountService } from './account.service';
+import { LoggingService } from './logging.service';
 
 // import { CockpitComponent } from './cockpit/cockpit.component';
 // import { ServerElementComponent } from './server-element/server-element.component';
@@ -69,7 +71,7 @@ import { NewAccountComponent } from './new-account/new-account.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AccountService , LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
