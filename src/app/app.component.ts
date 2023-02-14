@@ -1,5 +1,5 @@
 import { Component,  OnInit } from '@angular/core';
-import { AccountService } from './account.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { AccountService } from './account.service';
   // styleUrls: ['./app.component.css']
   styleUrls :['./app.component.css']
 })
-export class AppComponent  implements OnInit  {
+export class AppComponent {
   title = 'Project-1';
 //   serverElements = [{type : 'server' , name: "test-server" , content :'test'}];
 //   onServerAdded(serverData: {serverName : string , serverContent : string}) {
@@ -42,22 +42,22 @@ export class AppComponent  implements OnInit  {
 // }
 
 
-accounts : {name : string , status : string} [] =[];
+// accounts : {name : string , status : string} [] =[];
 
-constructor(private accountService:AccountService ){}
+// constructor(private accountService:AccountService ){}
 
-ngOnInit(){
-    this.accounts = this.accountService.accounts;
-}
+// ngOnInit(){
+//     this.accounts = this.accountService.accounts;
+// }
 
 
 
 
 //MAIN CODE
-// loadedFeature = 'recipe';
-// onNavigate(feature) {
-//   this.loadedFeature = feature;
-// }
+loadedFeature = 'recipe';
+onNavigate(feature ) {
+  this.loadedFeature = feature;
+}
 
 
 }
