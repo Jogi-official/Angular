@@ -54,7 +54,6 @@ ngOnInit(){
 
 
 
-
 //MAIN CODE
 // loadedFeature = 'recipe';
 // onNavigate(feature) {
