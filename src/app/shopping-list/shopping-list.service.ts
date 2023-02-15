@@ -19,4 +19,16 @@ addIngrdient(ingredient : Ingredient){
   this.ingredients.push(ingredient);
   this.ingredientChanged.emit(this.ingredients.slice());
 }
+
+addIngrdients(ingredients : Ingredient[]){
+  // for(let ingrdient of ingredients){
+  //   this.addIngrdient(ingrdient);
+  // }
+
+  this.ingredients.push(...ingredients);
+  this.ingredientChanged.emit(this.ingredients.slice());
+
+
+}
+
 }
