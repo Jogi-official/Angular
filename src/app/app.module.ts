@@ -13,6 +13,9 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { ShoppingListComponentt } from './shopping-list/shopping-list.component';
 import {DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { HomeComponent } from './home/home.component';
+import { ServersComponent } from './servers/servers.component';
+import { UsersComponent } from './users/users.component';
 
 
 // import { CockpitComponent } from './cockpit/cockpit.component';
@@ -63,7 +66,10 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     RecipeItemComponent,
     ShoppingEditComponent,
     ShoppingListComponentt,
-    DropdownDirective
+    DropdownDirective,
+    HomeComponent,
+    ServersComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
