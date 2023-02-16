@@ -20,6 +20,8 @@ import { EditServerComponent } from './servers/edit-server/edit-server.component
 import { ServerComponent } from './servers/server/server.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServersService } from './servers/server.service';
+import { Routes , RouterModule } from '@angular/router';
+
 
 
 // import { CockpitComponent } from './cockpit/cockpit.component';
@@ -59,6 +61,11 @@ import { ServersService } from './servers/server.service';
     // BetterHighlightDirective,
     // UnlessDirective,
 
+const appRoutes : Routes = [
+  {path : '' , component : HomeComponent},
+  {path : 'users' , component : UsersComponent},
+  {path : 'servers' , component : ServersComponent}
+];
 
 @NgModule({
   declarations: [
@@ -80,7 +87,8 @@ import { ServersService } from './servers/server.service';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ShoppingListService , ServersService],
   bootstrap: [AppComponent]
