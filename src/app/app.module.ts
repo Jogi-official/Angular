@@ -21,6 +21,7 @@ import { ServerComponent } from './servers/server/server.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServersService } from './servers/server.service';
 import { Routes , RouterModule } from '@angular/router';
+import { UserComponent } from './users/user/user.component';
 
 
 
@@ -64,6 +65,7 @@ import { Routes , RouterModule } from '@angular/router';
 const appRoutes : Routes = [
   {path : '' , component : HomeComponent},
   {path : 'users' , component : UsersComponent},
+  {path : 'users/:id/:name' , component : UserComponent},
   {path : 'servers' , component : ServersComponent}
 ];
 
@@ -82,7 +84,8 @@ const appRoutes : Routes = [
     ServersComponent,
     UsersComponent,
     EditServerComponent,
-    ServerComponent
+    ServerComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
