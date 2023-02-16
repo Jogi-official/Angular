@@ -16,6 +16,10 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { HomeComponent } from './home/home.component';
 import { ServersComponent } from './servers/servers.component';
 import { UsersComponent } from './users/users.component';
+import { EditServerComponent } from './servers/edit-server/edit-server.component';
+import { ServerComponent } from './servers/server/server.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ServersService } from './servers/server.service';
 
 
 // import { CockpitComponent } from './cockpit/cockpit.component';
@@ -69,13 +73,16 @@ import { UsersComponent } from './users/users.component';
     DropdownDirective,
     HomeComponent,
     ServersComponent,
-    UsersComponent
+    UsersComponent,
+    EditServerComponent,
+    ServerComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService , ServersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

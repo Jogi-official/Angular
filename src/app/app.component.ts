@@ -50,14 +50,23 @@ export class AppComponent {
 //     this.accounts = this.accountService.accounts;
 // }
 
+//ROUTING
 
 
 
-//MAIN CODE
-loadedFeature = 'recipe';
-onNavigate(feature ) {
-  this.loadedFeature = feature;
-}
+
+
+
+
+
+
+
+
+// MAIN CODE
+// loadedFeature = 'recipe';
+// onNavigate(feature ) {
+//   this.loadedFeature = feature;
+// }
 
 
 }
