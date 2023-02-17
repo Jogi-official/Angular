@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ServersService  } from '../server.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-edit-server',
@@ -11,6 +11,7 @@ export class EditServerComponent {
   server: {id: number, name: string, status: string};
   serverName = '';
   serverStatus = '';
+  allowEdit = false;
 
   query_params = {};
   fragments = {};
@@ -22,7 +23,11 @@ export class EditServerComponent {
     this.server = this.serversService.getServer(1);
     this.serverName = this.server.name;
     this.serverStatus = this.server.status;
-    this.route.queryParams.subscribe()
+    this.route.queryParams.subscribe(
+      (query_params : Params)=>{
+        this.allowEdit = this.query_params["allowEdit"] === "1" ? true : false;
+      }
+    )
     this.route.fragment.subscribe()
 
   }
