@@ -26,6 +26,7 @@ export class EditServerComponent {
     this.route.queryParams.subscribe(
       (query_params : Params)=>{
         this.allowEdit = this.query_params["allowEdit"] === "1" ? true : false;
+        console.log(this.allowEdit)
       }
     )
     this.route.fragment.subscribe()

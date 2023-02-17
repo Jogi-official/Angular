@@ -22,6 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServersService } from './servers/server.service';
 import { UserComponent } from './users/user/user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthService } from './auth.service';
+import { AuthGaurd } from './auth-gaurd.service';
 
 
 
@@ -89,7 +91,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRoutingModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService , ServersService],
+  providers: [ShoppingListService , ServersService, AuthService , AuthGaurd],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
