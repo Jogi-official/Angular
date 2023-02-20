@@ -3,3 +3,4 @@ Testing purpose
 Working on Assignment
  Understood passing Static Data
 Understood Dyanmic data with resolve
+Understood Location Strategies
