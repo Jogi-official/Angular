@@ -39,6 +39,10 @@ addIngredientsToShoppingList(ingrdeients : Ingredient[] ){
   this.slService.addIngrdients(ingrdeients);
 }
 
+getRecipe(index : number){
+  return this.recipes[index];
+}
+
 
 
 }
