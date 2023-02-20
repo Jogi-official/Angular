@@ -13,17 +13,17 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { ShoppingListComponentt } from './shopping-list/shopping-list.component';
 import {DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
-import { HomeComponent } from './home/home.component';
-import { ServersComponent } from './servers/servers.component';
-import { UsersComponent } from './users/users.component';
-import { EditServerComponent } from './servers/edit-server/edit-server.component';
-import { ServerComponent } from './servers/server/server.component';
-import { AppRoutingModule } from './app-routing.module';
-import { ServersService } from './servers/server.service';
-import { UserComponent } from './users/user/user.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AuthService } from './auth.service';
-import { AuthGaurd } from './auth-gaurd.service';
+// import { HomeComponent } from './home/home.component';
+// import { ServersComponent } from './servers/servers.component';
+// import { UsersComponent } from './users/users.component';
+// import { EditServerComponent } from './servers/edit-server/edit-server.component';
+// import { ServerComponent } from './servers/server/server.component';
+// import { AppRoutingModule } from './app-routing.module';
+// import { ServersService } from './servers/server.service';
+// import { UserComponent } from './users/user/user.component';
+// import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+// import { AuthService } from './auth.service';
+// import { AuthGaurd } from './auth-gaurd.service';
 
 
 
@@ -77,21 +77,12 @@ import { AuthGaurd } from './auth-gaurd.service';
     ShoppingEditComponent,
     ShoppingListComponentt,
     DropdownDirective,
-    HomeComponent,
-    ServersComponent,
-    UsersComponent,
-    EditServerComponent,
-    ServerComponent,
-    UserComponent,
-    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
-    AppRoutingModule
   ],
-  providers: [ShoppingListService , ServersService, AuthService , AuthGaurd],
+  providers: [ShoppingListService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

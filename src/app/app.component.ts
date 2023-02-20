@@ -63,10 +63,10 @@ export class AppComponent {
 
 
 // MAIN CODE
-// loadedFeature = 'recipe';
-// onNavigate(feature ) {
-//   this.loadedFeature = feature;
-// }
+loadedFeature = 'recipe';
+onNavigate(feature ) {
+  this.loadedFeature = feature;
+}
 
 
 }
