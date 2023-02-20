@@ -16,15 +16,16 @@ export class RecipeService{
     'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80',
     [
       new Ingredient('Meat' , 1),
-      new Ingredient('French Fries' , 20)
+      new Ingredient('Eggs' , 20),
+      new Ingredient('Tomato' , 2)
     ]),
-    new Recipe('XYUX',
-     'Chicken With Rice' ,
+    new Recipe('Donuts',
+     'Glaced Donuts with Coke' ,
      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVPTVxKFwqL3_wgTS__Mw49Zkfuet0eGaepw&usqp=CAU',
      [
-      new Ingredient('Meat' , 1),
+      new Ingredient('Wheat' , 1),
       new Ingredient('French Fries' , 20),
-      new Ingredient('Rice' , 2)
+      new Ingredient('Cola' , 2)
      ])
   ];
 
