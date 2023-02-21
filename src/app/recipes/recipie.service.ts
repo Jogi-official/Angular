@@ -3,13 +3,14 @@ import { EventEmitter, Injectable } from "@angular/core";
 import { Ingredient } from "../shared/ingredients.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 
+
+
 @Injectable()
 
 
 
 export class RecipeService{
 
-  recipeSelected = new  EventEmitter<Recipe>();
   private recipes : Recipe[] = [
     new Recipe('Chicken',
     'This is Chicken Biryani' ,
@@ -17,7 +18,7 @@ export class RecipeService{
     [
       new Ingredient('Meat' , 1),
       new Ingredient('Eggs' , 20),
-      new Ingredient('Tomato' , 2)n
+      new Ingredient('Tomato' , 2)
     ]),
     new Recipe('Donuts',
      'Glaced Donuts with Coke' ,
