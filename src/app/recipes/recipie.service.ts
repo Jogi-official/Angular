@@ -17,7 +17,7 @@ export class RecipeService{
     [
       new Ingredient('Meat' , 1),
       new Ingredient('Eggs' , 20),
-      new Ingredient('Tomato' , 2)
+      new Ingredient('Tomato' , 2)n
     ]),
     new Recipe('Donuts',
      'Glaced Donuts with Coke' ,
