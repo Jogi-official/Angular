@@ -33,7 +33,10 @@ addIngrdients(ingredients : Ingredient[]){
   this.ingredientChanged.next(this.ingredients.slice());
 }
 
-
+updateIngredient(index : number, newingredient : Ingredient){
+  this.ingredients[index] = newingredient;
+  this.ingredientChanged.next(this.ingredients.slice());
+}
 
 
 
