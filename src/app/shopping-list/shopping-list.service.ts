@@ -15,6 +15,9 @@ startedEditing = new Subject<number>();
     return this.ingredients.slice();
   }
 
+getIngredient(index : number){
+    return this.ingredients[index];
+}
 
 addIngrdient(ingredient : Ingredient){
   this.ingredients.push(ingredient);
@@ -28,8 +31,10 @@ addIngrdients(ingredients : Ingredient[]){
 
   this.ingredients.push(...ingredients);
   this.ingredientChanged.next(this.ingredients.slice());
-
-
 }
+
+
+
+
 
 }
