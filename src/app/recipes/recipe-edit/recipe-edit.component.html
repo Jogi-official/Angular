@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <form>
+    <form [formGroup] = 'recipeForm' (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-xs-12">
           <button type = "submit" class = "btn btn-success mr-5 p-6">Save</button>
@@ -13,7 +13,8 @@
           <div class="form-group">
             <label for="name"> Name</label>
             <input type="text"
-            id = "name">
+            id = "name"
+            formControlName = "name">
           </div>
         </div>
       </div>
@@ -22,7 +23,8 @@
           <div class="form-group">
             <label for="imagePath">Image Url</label>
             <input type="text"
-            id = "imagePath">
+            id = "imagePath"
+            formControlName = "imgPath">
           </div>
         </div>
       </div>
@@ -41,6 +43,7 @@
             id = "description"
             class = "form-control"
             rows = "6"
+            formControlName = "description"
             ></textarea>
           </div>
         </div>

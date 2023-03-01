@@ -39,8 +39,13 @@ private initForm(){
   this.recipeForm = new FormGroup({
     'name' : new FormControl(recipeName),
     'imgPath': new FormControl(recipeImagePath),
-    'description' : new FormControl(recipeDescription);
+    'description' : new FormControl(recipeDescription)
   });
 }
+
+onSubmit(){
+  console.log(this.recipeForm);
+}
+
 
 }
