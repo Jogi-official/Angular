@@ -2,6 +2,7 @@ import { Recipe } from "./recipe.model";
 import { EventEmitter, Injectable } from "@angular/core";
 import { Ingredient } from "../shared/ingredients.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
+import { Subject } from "rxjs";
 
 
 
@@ -29,6 +30,7 @@ export class RecipeService{
       new Ingredient('Cola' , 2)
      ])
   ];
+  recipesChanged = new Subject<Recipe[]>();
 
 constructor(private slService : ShoppingListService ){}
 
@@ -45,6 +47,15 @@ getRecipe(index : number){
   return this.recipes[index];
 }
 
+addRecipe(recipe : Recipe){
+  this.recipes.push(recipe);
+  this.recipesChanged.next(this.recipes.slice());
+}
+
+updateRecipe(index : number ,newRecipe : Recipe){
+  this.recipes[index]  = newRecipe;
+  this.recipesChanged.next(this.recipes.slice());
+}
 
 
 }
