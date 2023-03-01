@@ -91,4 +91,8 @@ onCancel(){
   this.router.navigate(['../'] , {relativeTo:this.route})
 }
 
+onDeleteIngrident(index : number)
+{
+  (<FormArray>this.recipeForm.get('ingredients')).clear();
+}
 }
