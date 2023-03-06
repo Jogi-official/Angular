@@ -17,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from './recipes/recipie.service';
+import { BasicHtmlCssComponent } from './basic-html-css/basic-html-css.component';
 // import { HomeComponent } from './home/home.component';
 // import { ServersComponent } from './servers/servers.component';
 // import { UsersComponent } from './users/users.component';
@@ -83,6 +84,7 @@ import { RecipeService } from './recipes/recipie.service';
     DropdownDirective,
     RecipeStartComponent,
     RecipeEditComponent,
+    BasicHtmlCssComponent,
   ],
   imports: [
     BrowserModule,
